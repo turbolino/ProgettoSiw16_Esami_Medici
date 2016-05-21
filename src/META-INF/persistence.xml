@@ -1,7 +1,7 @@
 <persistence xmlns="http://java.sun.com/xml/ns/persistence"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
-	<persistence-unit name="products-unit-test"
+	<!-- <persistence-unit name="products-unit-test"
 		transaction-type="RESOURCE_LOCAL">
 		<class>it.uniroma3.db.products.Product</class>
 		<properties>
@@ -9,15 +9,15 @@
 			<property name="javax.persistence.jdbc.user" value="postgres" />
 			<property name="javax.persistence.jdbc.password" value="postgres" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/postgres" />
-			<!-- Hibernate properties -->
+			Hibernate properties
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="true" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
 			<property name="hibernate.hbm2ddl.auto" value="create" />
 		</properties>
-	</persistence-unit>
+	</persistence-unit> -->
 
-	<persistence-unit name="products-unit"
+	<!-- <persistence-unit name="products-unit"
 		transaction-type="RESOURCE_LOCAL">
 		<class>it.uniroma3.db.products.Product</class>
 		<properties>
@@ -25,12 +25,12 @@
 			<property name="javax.persistence.jdbc.user" value="postgres" />
 			<property name="javax.persistence.jdbc.password" value="postgres" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/postgres" />
-			<!-- Hibernate properties -->
+			Hibernate properties
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="true" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
 			<property name="hibernate.hbm2ddl.auto" value="update" />
 		</properties>
-	</persistence-unit>
+	</persistence-unit> -->
 
 </persistence>
