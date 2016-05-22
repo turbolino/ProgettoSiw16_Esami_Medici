@@ -19,9 +19,7 @@ public class Esame {
 	private Date dataPrenotazione;
 	@Column(nullable = true)
 	private Date dataEsame;
-	@Column(nullable = true)
 	private Medico medico;
-	@Column(nullable = true)
 	private TipologiaEsame tipologiaEsame;
 	@Column(nullable = true)
 	private HashMap<String, String> risultati;
