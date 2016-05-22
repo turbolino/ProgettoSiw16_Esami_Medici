@@ -1,6 +1,15 @@
 package bean;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Paziente {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long idPaziente;
 	private String nomePaziente;
 	private String cognomePaziente;
 	private String usernamePaziente;
@@ -13,6 +22,9 @@ public class Paziente {
 		this.cognomePaziente = cognome;
 		this.usernamePaziente = username;
 		this.passwordPaziente = password;
+	}
+	public Paziente() {
+		// TODO Auto-generated constructor stub
 	}
 	public String getNome() {
 		return nomePaziente;

@@ -1,0 +1,17 @@
+CREATE TABLE public.product
+(
+  id bigint NOT NULL, -- 
+  name character varying[],
+  description character varying[],
+  code character varying[],
+  price double precision,
+  CONSTRAINT product_pkey PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.product
+  OWNER TO postgres;
+COMMENT ON COLUMN public.product.id IS '
+';
+

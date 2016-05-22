@@ -1,8 +1,12 @@
 package bean;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
 public class Medico {
 	private String nomeMedico;
 	private String cognomeMedico;
+	@Id
 	private String idMedico;
 	private String specializzazione;
 	
@@ -13,6 +17,9 @@ public class Medico {
 		this.cognomeMedico = cognome;
 		this.idMedico = id;
 		this.specializzazione = specializzazione;
+	}
+	public Medico() {
+		// TODO Auto-generated constructor stub
 	}
 	public String getNome() {
 		return nomeMedico;

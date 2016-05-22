@@ -1,22 +1,35 @@
 package bean;
 
-import java.util.ArrayList;
+import javax.persistence.Entity;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+
+
+@Entity
+@NamedQuery(name = "findAllTipologiaEsame", query = "SELECT p FROM TipologiaEsame p")
 
 public class TipologiaEsame {
 	
+	
+	@Id 
 	private String codiceTipologia;
 	private String nomeTipologia;
 	private String descrizione;
 	private String costo;
-	private ArrayList<String> prerequisiti;
+	private String prerequisiti;
 	
-	
-	public TipologiaEsame(String nome, String descrizione, String costo, ArrayList<String> prerequisiti, String codiceTipologia) {
+	public TipologiaEsame(String nome, String descrizione, String costo, String prerequisiti, String codiceTipologia) {
 		this.nomeTipologia = nome;
 		this.descrizione = descrizione;
 		this.costo = costo;
 		this.prerequisiti = prerequisiti;
 		this.codiceTipologia= codiceTipologia;
+	}
+	public TipologiaEsame() {
+		
 	}
 	public String getNome() {
 		return nomeTipologia;
@@ -36,10 +49,10 @@ public class TipologiaEsame {
 	public void setCosto(String costo) {
 		this.costo = costo;
 	}
-	public ArrayList<String> getPrerequisiti() {
+	public String getPrerequisiti() {
 		return prerequisiti;
 	}
-	public void setPrerequisiti(ArrayList<String> prerequisiti) {
+	public void setPrerequisiti(String prerequisiti) {
 		this.prerequisiti = prerequisiti;
 	}
 	public String getCodiceTipologia() {

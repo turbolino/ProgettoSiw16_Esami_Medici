@@ -3,13 +3,27 @@ package bean;
 import java.sql.Date;
 import java.util.HashMap;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+@Entity
 public class Esame {
-
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long idEsame;
+	@Column(nullable = true)
 	private Paziente paziente;
+	@Column(nullable = true)
 	private Date dataPrenotazione;
+	@Column(nullable = true)
 	private Date dataEsame;
+	@Column(nullable = true)
 	private Medico medico;
+	@Column(nullable = true)
 	private TipologiaEsame tipologiaEsame;
+	@Column(nullable = true)
 	private HashMap<String, String> risultati;
 	
 	
@@ -21,6 +35,10 @@ public class Esame {
 		this.tipologiaEsame = tipologiaEsame;
 	}
 	
+	public Esame() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public Paziente getPaziente() {
 		return paziente;
 	}
