@@ -1,38 +1,55 @@
 package bean;
 
 import java.sql.Date;
-import java.util.HashMap;
+import java.util.List;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 @Entity
 public class Esame {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idEsame;
-	@Column(nullable = true)
+	@OneToOne
 	private Paziente paziente;
-	@Column(nullable = true)
+
 	private Date dataPrenotazione;
-	@Column(nullable = true)
+	
 	private Date dataEsame;
+	@OneToOne
 	private Medico medico;
+	@OneToOne
 	private TipologiaEsame tipologiaEsame;
-	@Column(nullable = true)
-	private HashMap<String, String> risultati;
+
+	@OneToMany 
+ 
+	private List<RigaEsame> risultati;
 	
 	
 	
-	public Esame(Paziente paziente, Date dataPrenotazione, Medico medico, TipologiaEsame tipologiaEsame) {
+	public Esame(Paziente paziente, Date dataPrenotazione, Medico medico, TipologiaEsame tipologiaEsame,Date dataEsame,List<RigaEsame> risultati) {
 		this.paziente = paziente;
 		this.dataPrenotazione = dataPrenotazione;
 		this.medico = medico;
 		this.tipologiaEsame = tipologiaEsame;
+		this.dataEsame=dataEsame;
+		this.risultati=risultati;
 	}
 	
+	
+	
+	public Esame(Paziente paziente, Date dataPrenotazione, TipologiaEsame tipologiaEsame) {
+		this.paziente = paziente;
+		this.dataPrenotazione = dataPrenotazione;
+		this.tipologiaEsame = tipologiaEsame;
+	}
+
+
+
 	public Esame() {
 		// TODO Auto-generated constructor stub
 	}
@@ -67,10 +84,10 @@ public class Esame {
 	public void setTipologiaEsame(TipologiaEsame tipologiaEsame) {
 		this.tipologiaEsame = tipologiaEsame;
 	}
-	public HashMap<String, String> getRisultati() {
+	public List<RigaEsame> getRisultati() {
 		return risultati;
 	}
-	public void setRisultati(HashMap<String, String> risultati) {
+	public void setRisultati(List<RigaEsame> risultati) {
 		this.risultati = risultati;
 	}
 	

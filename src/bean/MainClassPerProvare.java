@@ -1,6 +1,6 @@
 package bean;
 
-import java.sql.Date;
+import java.util.Calendar;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -41,7 +41,7 @@ public class MainClassPerProvare {
 		
 		
 		Esame a = new Esame();
-		a.setDataEsame(new Date(10101));
+		a.setDataPrenotazione(new java.sql.Date(Calendar.getInstance().getTime().getTime()));;
 //		a.setPassword("50");
 //		a.setUsername("AAAa wonderful bla bla");
 //		a.setNome("ESAME DEL CAZZO");
