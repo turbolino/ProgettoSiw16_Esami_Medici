@@ -20,7 +20,8 @@ public class TipologiaEsameDao implements Serializable {
 
    private static final long serialVersionUID = 1L;
 
-  
+   
+   
    public List<TipologiaEsame> getTipologieDao(){
       ResultSet rs = null;
       PreparedStatement pst = null;
