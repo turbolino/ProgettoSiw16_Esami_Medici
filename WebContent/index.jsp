@@ -10,7 +10,8 @@
 		<h:form>
 			<h:outputText value="Inserisci il tuo nome per accedere" />
 
-			<h:commandButton value="Accedi" action="visualizzaTipologie" />
+			<h:commandButton value="Accedi" action="new" />
+			<h:commandButton value="Visualizza le tipologie di esame offerte dalla clinica" action="visualizzaTipologie" />
 
 		</h:form>
 	</f:view>

@@ -7,6 +7,10 @@
   <navigation-rule>
     <from-view-id>/index.jsp</from-view-id>
     <navigation-case>
+      <from-outcome>new</from-outcome>
+      <to-view-id>/NewFile.xhtml</to-view-id>
+    </navigation-case>
+        <navigation-case>
       <from-outcome>visualizzaTipologie</from-outcome>
       <to-view-id>/visualizzaTipologie.jsp</to-view-id>
     </navigation-case>

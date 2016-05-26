@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14640253828280" configfile="/progetto_siw0616/WebContent/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="index" x="122" y="370" id="pf14640255627182" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14640255627183 pf14640255627184" path="/index.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="visualizzaTipologie" x="338" y="178" id="pf14640255627171" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14640255627183" path="/visualizzaTipologie.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="login" x="338" y="562" id="pf14640260698325" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf14640255627184" path="/login.jsp"/>
-  <links id="pf14640255627183" target="pf14640255627171" source="pf14640255627182" outcome="visualizzaTipologie"/>
-  <links id="pf14640255627184" target="pf14640260698325" source="pf14640255627182" outcome="invia"/>
+  <nodes xsi:type="pageflow:PFPage" name="index" x="122" y="178" id="pf14640255627182" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14640255627183 pf14641895579007" path="/index.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="visualizzaTipologie" x="338" y="178" id="pf14640255627171" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf14640255627183 pf14641895579007" path="/NewFile.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="login" x="122" y="562" id="pf14640260698325" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" path="/login.jsp"/>
+  <links id="pf14640255627183" target="pf14640255627171" source="pf14640255627182" outcome="new"/>
+  <links id="pf14641895579007" target="pf14640255627171" source="pf14640255627182" outcome="visualizzaTipologie"/>
 </pageflow:Pageflow>
